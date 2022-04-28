@@ -46,7 +46,7 @@ func UnmarshalFromReader(reader io.Reader, v interface{}) error {
 }
 
 func unmarshalUseNumber(decoder *json.Decoder, v interface{}) error {
-	decoder.UseNumber()
+	// decoder.UseNumber() // 先注释了,临时解决一下问题
 	return decoder.Decode(v)
 }
 
